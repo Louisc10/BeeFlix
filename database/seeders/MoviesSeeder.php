@@ -110,6 +110,6 @@ class MoviesSeeder extends Seeder
             $model->rating = $d['rating'];
             $model->save();
         }
-        }
+    }
 }
 

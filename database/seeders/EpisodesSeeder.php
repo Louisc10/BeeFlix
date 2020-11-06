@@ -5,7 +5,7 @@ namespace Database\Seeders;
 use App\Models\Episodes;
 use Illuminate\Database\Seeder;
 
-class EpisodeSeeder extends Seeder
+class EpisodesSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -44,6 +44,6 @@ class EpisodeSeeder extends Seeder
             $model->title = $d['title'];
             $model->save();
         }
-        }
+    }
 }
 
