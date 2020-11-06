@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Genres;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class GenresSeeder extends Seeder
 {
@@ -14,22 +15,16 @@ class GenresSeeder extends Seeder
      */
     public function run()
     {
-        $datas = [
+        DB::table('genres')->insert([
             [
-                'name' => 'Drama',
+            'name' => 'Drama',
             ],
             [
-                'name' => 'Kids',
+            'name' => 'Kids',
             ],
             [
-                'name' => 'TV Show',
+            'name' => 'TV Show',
             ],
-        ];
-    
-        foreach($datas as $d){
-            $model = new Genres();
-            $model->name = $d['name'];
-            $model->save();
-        }
+        ]);
     }
 }

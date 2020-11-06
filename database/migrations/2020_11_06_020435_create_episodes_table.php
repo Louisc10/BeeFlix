@@ -15,11 +15,11 @@ class CreateEpisodesTable extends Migration
     {
         Schema::create('episodes', function (Blueprint $table) {
             $table->id();
-            $table->integer('movie_id');
+            $table->bigInteger('movie_id');
             $table->integer('episodes');
             $table->string('title');
 
-            $table->foreign('movie_id')->references('id')->on('movies')->onUpdate('cascade')->onDelete('cascade');
+            // $table->foreign('movie_id')->references('id')->on('movies')->onUpdate('cascade')->onDelete('cascade');
         });
     }
 

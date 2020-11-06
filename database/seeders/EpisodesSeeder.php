@@ -42,7 +42,7 @@ class EpisodesSeeder extends Seeder
             $model->movie_id = $d['movie_id'];
             $model->episode = $d['episode'];
             $model->title = $d['title'];
-            $model->save();
+            // $model->save();
         }
     }
 }
