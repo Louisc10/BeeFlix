@@ -17,6 +17,6 @@ class DatabaseSeeder extends Seeder
             GenresSeeder::class,
             MoviesSeeder::class,
             EpisodesSeeder::class
-            ]);
+        ]);
     }
 }
