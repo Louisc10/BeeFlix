@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class RoutingController extends Controller
 {
     //
 
     public function homepage(){
-        return view('Page.MainPage');
+        $drama = app('App\Http\Controllers\MoviesController')->getMovieByGenreId('Drama');
+        return view('Page.MainPage',['drama' => $drama]);
     }
 
     public function drama(){

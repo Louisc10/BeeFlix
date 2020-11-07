@@ -4,9 +4,21 @@ namespace App\Http\Controllers;
 
 use App\Models\movies;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MoviesController extends Controller
 {
+    public function getMovieByGenreId($genre){
+        $id = app('App\Http\Controllers\GenresController')->getGenreIdByName($genre);
+
+        $data =DB::table('movies')
+            ->get()
+            ->where('genre_id', $id);
+            
+        $result = json_decode($data, true);
+        return $result;
+    }
+
     /**
      * Display a listing of the resource.
      *

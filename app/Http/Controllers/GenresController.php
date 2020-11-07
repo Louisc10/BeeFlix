@@ -4,9 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\genres;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class GenresController extends Controller
 {
+    public function getGenreIdByName($genre){
+        $id = DB::table('genres')
+                ->where('name',  $genre)
+                ->first();
+        return $id->id;
+    }
+
     /**
      * Display a listing of the resource.
      *
