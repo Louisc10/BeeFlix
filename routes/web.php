@@ -12,16 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\RoutingController;
 
-Route::get('/', function () {
-    return view('MainPage');
-});
-Route::get('/drama', function () {
-    return view('Drama');
-});
-Route::get('/kids', function () {
-    return view('Kids');
-});
-Route::get('/tvShow', function () {
-    return view('TVShow');
-});
+Route::get('/', 'RoutingController@homepage');
+Route::get('drama', 'RoutingController@drama');
+Route::get('kids', 'RoutingController@kids');
+Route::get('tvShow', 'RoutingController@tvShow');

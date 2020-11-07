@@ -13,7 +13,7 @@
                 </div>
             </button>
         </a>
-        <a href="">
+        <a href="{{ url('/') }}">
             <button style="height: 30px; color: darkgrey; background-color: white; border: 1px darkgray solid">
                 <div>
                     LIHAT SEMUA FILM
