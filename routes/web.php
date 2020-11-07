@@ -15,6 +15,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RoutingController;
 
 Route::get('/', 'RoutingController@homepage');
-Route::get('drama', 'RoutingController@drama');
-Route::get('kids', 'RoutingController@kids');
-Route::get('tvShow', 'RoutingController@tvShow');
+Route::get('Drama', 'RoutingController@drama');
+Route::get('Kids', 'RoutingController@kids');
+Route::get('TVShow', 'RoutingController@tvShow');

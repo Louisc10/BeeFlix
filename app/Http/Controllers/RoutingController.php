@@ -11,18 +11,23 @@ class RoutingController extends Controller
 
     public function homepage(){
         $drama = app('App\Http\Controllers\MoviesController')->getMovieByGenreId('Drama');
-        return view('Page.MainPage',['drama' => $drama]);
+        $kids = app('App\Http\Controllers\MoviesController')->getMovieByGenreId('Kids');
+        $tvshow = app('App\Http\Controllers\MoviesController')->getMovieByGenreId('TV Show');
+        return view('Page.MainPage',['drama' => $drama, 'kids' => $kids, 'tvshow' => $tvshow]);
     }
 
     public function drama(){
-        return view('Page.DramaPage');
+        $drama = app('App\Http\Controllers\MoviesController')->getMovieByGenreId('Drama');
+        return view('Page.DramaPage',['drama' => $drama]);
     }
 
     public function kids(){
-        return view('Page.KidsPage');
+        $kids = app('App\Http\Controllers\MoviesController')->getMovieByGenreId('Kids');
+        return view('Page.KidsPage',['kids' => $kids]);
     }
 
     public function tvShow(){
-        return view('Page.TVShowPage');
+        $tvshow = app('App\Http\Controllers\MoviesController')->getMovieByGenreId('TV Show');
+        return view('Page.TVShowPage',['tvshow' => $tvshow]);
     }
 }

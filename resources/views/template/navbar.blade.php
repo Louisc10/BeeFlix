@@ -1,5 +1,5 @@
 <div>
-    <div>
+    <div style="font-size: 24px; font-weight: bold;">
         BeeFlix
     </div>
     <div style="display: flex; align-items: center;">

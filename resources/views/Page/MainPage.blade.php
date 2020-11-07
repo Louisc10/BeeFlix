@@ -16,4 +16,6 @@
 
 @section('content')
     @include('template.oneGenreOnly', ['collection' => $drama, 'title' => 'Drama'] )
+    @include('template.oneGenreOnly', ['collection' => $kids, 'title' => 'Kids'] )
+    @include('template.oneGenreOnly', ['collection' => $tvshow, 'title' => 'TVShow'] )
 @endsection

@@ -1,10 +1,10 @@
-<div>
-    <div>
+<div style="margin: 10px 0">
+    <h3>
         {{ $title }}
-    </div>
+    </h3>
     <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: flex-start;">
         @foreach ($collection as $item)
-            <div style="min-width: 175px; width: 20%; height: 350px; border: 1px solid darkgray; display: flex; flex-direction: column">
+            <div style="min-width: 175px; width: 24%; height: 350px; border: 1px solid darkgray; display: flex; flex-direction: column">
                 <div style="width: 100%; height: 250px;">
                     <img src="assets/{{ $item['photo'] }}" alt="{{ $item['title'] }}" style="width: 100%; height: 100%;">
                 </div>

@@ -1,3 +1,7 @@
+@php
+    $drama;
+@endphp
+
 @extends('template.template')
 
 @section('title')
@@ -9,5 +13,5 @@
 @endsection
 
 @section('content')
-    @include('template.dramaOnly')
+    @include('template.oneGenreOnly', ['collection' => $drama, 'title' => 'Drama'] )
 @endsection
