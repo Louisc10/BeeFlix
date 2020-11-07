@@ -1,6 +1,6 @@
 <div style="margin: 10px 0">
-    <h3>
-        {{ $title }}
+    <h3 style="font-weight: bold">
+        {{ strtoupper($title) }}
     </h3>
     <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: flex-start;">
         @foreach ($collection as $item)
