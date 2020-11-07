@@ -20,7 +20,7 @@ class MoviesSeeder extends Seeder
                 'title' => 'The Legend of the Blue Sea',
                 'photo' => 'drama/1.jpg',
                 'description' => 'A mermaid from the Joseon period ends up in present-day Seoul, where she crosses paths with a swindler who may have ties to someone from her past.',
-                'rating' => '4',
+                'rating' => '5',
             ],
             [
                 'genre_id' => '1',
@@ -34,7 +34,7 @@ class MoviesSeeder extends Seeder
                 'title' => 'Prison Playbook',
                 'photo' => 'drama/3.jpg',
                 'description' => 'With his major league baseball debut right around the corner, a star pitcher lands in prison and must learn to navigate his new world.',
-                'rating' => '4',
+                'rating' => '5',
             ],
             [
                 'genre_id' => '1',
@@ -48,7 +48,7 @@ class MoviesSeeder extends Seeder
                 'title' => 'The Boss Baby: Back in Business',
                 'photo' => 'kids/1.jpg',
                 'description' => 'The Boss Baby brings his big brother Tim to the office to teach him the art of business in this animated series sprung from the hit film.',
-                'rating' => '4',
+                'rating' => '5',
             ],
             [
                 'genre_id' => '2',
@@ -62,7 +62,7 @@ class MoviesSeeder extends Seeder
                 'title' => 'Peppa Pig Season 5',
                 'photo' => 'kids/3.jpg',
                 'description' => 'Join plucky piglet Peppa and her family and friends for everyday adventures that prove there\'s learning and laughter to be had anywhere you look.',
-                'rating' => '4',
+                'rating' => '5',
             ],
             [
                 'genre_id' => '2',
@@ -76,7 +76,7 @@ class MoviesSeeder extends Seeder
                 'title' => 'The Queen\'s Gambit',
                 'photo' => 'tvshow/1.jpg',
                 'description' => 'In a 1950s orphanage, a young girl reveals an astonishing talent for chess and begins an unlikely journey to stardom while grappling with addiction.',
-                'rating' => '4',
+                'rating' => '5',
             ],
             [
                 'genre_id' => '3',
@@ -90,7 +90,7 @@ class MoviesSeeder extends Seeder
                 'title' => 'Fight for My Way',
                 'photo' => 'tvshow/3.jpg',
                 'description' => 'A former taekwondo champion and an information desk worker aspire to chase their dreams in a world that isn’t kind to those with mediocre credentials.',
-                'rating' => '4',
+                'rating' => '5',
             ],
             [
                 'genre_id' => '3',
