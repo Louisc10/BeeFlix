@@ -9,6 +9,13 @@
         *{
             font-family: 'Courier New', Courier, monospace;
         }
+        body{
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>

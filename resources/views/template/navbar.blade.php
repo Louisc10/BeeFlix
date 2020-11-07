@@ -1,4 +1,4 @@
-<div>
+<div style="padding: 10px">
     <div style="font-size: 24px; font-weight: bold;">
         BeeFlix
     </div>
