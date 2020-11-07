@@ -33,6 +33,15 @@ class RoutingController extends Controller
 
     public function oneMovie($id){
         $movie = app('App\Http\Controllers\MoviesController')->getMovieByMovieId($id);
-        return view('Page.OneMoviePage',['item' => $movie[0]]);
+        $item = $movie[0];
+        $category ="";
+        if (strcmp($item['name'],"TV Show") == 0) {
+            $category = "TVShow";
+        }
+        else{
+            $category = $item['name'];
+        }
+        $episode = app('App\Http\Controllers\EpisodesController')->getEpisodeByMovieId($id);;
+        return view('Page.OneMoviePage',['item' => $item, 'category' => $category, 'collection' => $episode]);
     }
 }

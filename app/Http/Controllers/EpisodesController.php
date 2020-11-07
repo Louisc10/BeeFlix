@@ -7,6 +7,12 @@ use Illuminate\Http\Request;
 
 class EpisodesController extends Controller
 {
+    public function getEpisodeByMovieId($movieId){
+        $episode = episodes::where('movie_id', $movieId)
+            ->paginate(3);
+        return $episode;
+    }
+
     /**
      * Display a listing of the resource.
      *

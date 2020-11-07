@@ -4,15 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\movies;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class MoviesController extends Controller
 {
     public function getMovieByGenreId($genre){
         $id = app('App\Http\Controllers\GenresController')->getGenreIdByName($genre);
 
-        $data =DB::table('movies')
-            ->where('genre_id', $id)
+        $data = movies::where('genre_id', $id)
             ->get();
             
         $result = json_decode($data, true);
@@ -20,10 +18,9 @@ class MoviesController extends Controller
     }
 
     public function getMovieByMovieId($id){
-        $data =DB::table('movies')
-            ->where('id', $id)
+        $data = movies::join('genres', 'genres.id', '=', 'movies.genre_id')
+            ->where('movies.id', $id)
             ->get();
-            
         $result = json_decode($data, true);
         return $result;
     }

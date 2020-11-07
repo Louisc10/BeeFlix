@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Movies extends Model
 {
     use HasFactory;
+    public function Genre()
+    {
+        return $this->hasOne('App\Models\Genres');
+    }
+
+    public function Episode()
+    {
+        return $this->hasMany('App\Models\Episodes');
+    }
 }
