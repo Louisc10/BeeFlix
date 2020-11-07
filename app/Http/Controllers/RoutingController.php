@@ -30,4 +30,9 @@ class RoutingController extends Controller
         $tvshow = app('App\Http\Controllers\MoviesController')->getMovieByGenreId('TV Show');
         return view('Page.TVShowPage',['tvshow' => $tvshow]);
     }
+
+    public function oneMovie($id){
+        $movie = app('App\Http\Controllers\MoviesController')->getMovieByMovieId($id);
+        return view('Page.OneMoviePage',['item' => $movie[0]]);
+    }
 }

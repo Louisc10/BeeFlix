@@ -12,8 +12,17 @@ class MoviesController extends Controller
         $id = app('App\Http\Controllers\GenresController')->getGenreIdByName($genre);
 
         $data =DB::table('movies')
-            ->get()
-            ->where('genre_id', $id);
+            ->where('genre_id', $id)
+            ->get();
+            
+        $result = json_decode($data, true);
+        return $result;
+    }
+
+    public function getMovieByMovieId($id){
+        $data =DB::table('movies')
+            ->where('id', $id)
+            ->get();
             
         $result = json_decode($data, true);
         return $result;

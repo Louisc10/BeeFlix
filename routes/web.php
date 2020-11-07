@@ -18,3 +18,4 @@ Route::get('/', 'RoutingController@homepage');
 Route::get('Drama', 'RoutingController@drama');
 Route::get('Kids', 'RoutingController@kids');
 Route::get('TVShow', 'RoutingController@tvShow');
+Route::get('view/{id}', 'RoutingController@oneMovie');
