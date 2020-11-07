@@ -17,19 +17,19 @@
             <img src="{{ URL::to('/') }}/assets/{{ $item['photo'] }}" alt="{{ $item['title'] }}" style="width: 100%; height: 100%;">
         </div>
 
-        <div style="width: 400px; margin: 10px 10px; display: flex;flex-direction: column; justify-content: center; align-items: center;">
+        <div style="width: 400px; margin: 20px 20px; display: flex;flex-direction: column; justify-content: center; align-items: center;">
             <div style="margin: 10px 0; display: flex;flex-direction: column; justify-content: center; align-items: center; text-align: center; font-weight: bold; font-size: 18px">
                 {{ $item['title'] }}
-                <div style="width: 150px; display: flex; justify-content: space-between; align-items: center; text-align: center; font-weight: bold; font-size: 18px">
+                <div style="width: 150px; display: flex; justify-content: space-between; align-items: center; text-align: center; font-weight: bold; font-size: 18px;">
                     @for ($i = 0; $i < $item['rating']; $i++)
-                    <span class="fa fa-star" style="color:yellow;"></span>
+                    <span class="fa fa-star" style="color:yellow; background-color:darkgrey; padding: 5px; border-radius: 50px"></span>
                     @endfor
                     @for ($i = $item['rating']; $i < 5; $i++)
-                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star" style="background-color:darkgrey; padding: 5px; border-radius: 50px"></span>
                     @endfor
                 </div>
             </div>
-            <div style="width: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center">
+            <div style="width: 95%; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center">
                 <div style="color: grey;">
                     Description
                 </div>
@@ -40,7 +40,9 @@
             </div>
         </div>
         <div style="width: 400px; height: 250px; font-size: 12px">
-            Episode
+            <div style="font-size: 16px; font-weight: bold;">
+                Episode
+            </div>
             <table class="table">
                 <thead class="thead-dark">
                   <tr>
@@ -57,7 +59,9 @@
                     @endforeach
                 </tbody>
             </table>
-            {{ $collection->links() }}
+            <div style="display: flex; justify-content: center; align-items: center;">
+                {{ $collection->links() }}
+            </div>
         </div>
     </div>
 </div>
