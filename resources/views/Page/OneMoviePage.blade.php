@@ -39,7 +39,7 @@
                 Kategori: <a href="{{ URL::to('/'.$category) }}"  style="color: #5adbbd; text-decoration: none">{{ $item['name'] }}</a>
             </div>
         </div>
-        <div style="width: 400px; height: 250px; font-size: 12px">
+        <div style="width: 400px; height-min: 250px; font-size: 12px">
             <div style="font-size: 16px; font-weight: bold;">
                 Episode
             </div>
